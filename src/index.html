@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="app.js" defer></script>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .days {
+      color: #93867b;
+      font-size: 0.75rem;
+    }
+
+    .column, .blue-column {
+      border-radius: 3px;
+    }
+
+    .days {
+      color: #93867b;
+      margin-top: 5px;
+    }
+
+    .grid-item {
+      cursor: pointer;
+    }
+
+    .column:hover {
+      background-color: hsla(10, 79%, 65%, 0.5);
+    }
+
+    .blue-column:hover {
+      background-color: 	hsla(186, 34%, 60%, 0.5);
+    }
+
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+      z-index: 99;
+    }
+
+
+  </style>
+</head> 
+<body class="bg-cream mx-auto max-w-md xl:max-w-xl py-20">
+
+  <div class="flex justify-between items-center bg-soft-red w-10/12 mx-auto py-4 rounded-md mb-3">
+  <div class="ml-4 text-white">
+    <p class="text-xs text-very-pale-orange xl:text-sm">My balance</p>
+    <p class="font-bold text-lg xl:text-2xl">$921.48</p>
+  </div>
+  <div class="mr-4">
+    <img class="w-14" src='../images/logo.svg'/>
+  </div>
+  </div>
+  <div class="bg-very-pale-orange w-10/12 mx-auto rounded-md py-4">
+  <h1 class="font-extrabold text-dark-brown text-xl ml-4">Spending - Last 7 days</h1>
+
+  <div class="grid grid-cols-7 grid-rows-1 gap-4 pb-8 pt-16 px-4 items-end xl:px-6 xl:gap-6 ">
+  
+  <div class="grid-item">
+  <div class="column column-1 monday bg-soft-red h-10 relative">
+    <div class="box1 bg-hover text-white absolute bottom-[3.5rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$17.45</p>
+    </div> 
+  </div>
+  <p class="days">mon</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="column column-2 tuesday bg-soft-red h-20 relative">
+    <div class="box2 bg-hover text-white absolute bottom-[6rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$34.91</p>
+    </div> 
+  </div>
+  <p class="days">tue</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="blue-column column-3 wednesday bg-cyan h-32 relative">
+    <div class="box3 bg-hover text-white absolute bottom-[9rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$52.36</p>
+    </div> 
+  </div>
+  <p class="days">wed</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="column column-4 thursday bg-soft-red h-[4.5rem] relative">
+    <div class="box4 bg-hover text-white absolute bottom-[5rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$31.07</p>
+    </div> 
+  </div>
+  <p class="days">thu</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="column column-5 friday bg-soft-red h-14 relative">
+    <div class="box5 bg-hover text-white absolute bottom-[4.5rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$23.39</p>
+    </div> 
+  </div>
+  <p class="days ml-1">fri</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="column column-6 saturday bg-soft-red h-24 relative">
+    <div class="box6 bg-hover text-white absolute bottom-[7rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$43.28</p>
+    </div> 
+  </div>
+  <p class="days ml-1">sat</p>
+  </div>
+
+  <div class="grid-item">
+  <div class="column column-7 sunday bg-soft-red h-[3.7rem] relative">
+    <div class="box7 bg-hover text-white absolute bottom-[5rem] -left-2 p-[0.2rem] rounded-md hidden">
+      <p>$25.48</p>
+    </div> 
+  </div>
+  <p class="days">sun</p>
+  </div>
+
+  </div>
+
+
+  <hr class="w-10/12 mx-auto bg-cream">
+  
+  <div class="flex pt-4 justify-between px-4 pb-2">
+    <div>
+      <p class="text-medium-brown text-xs">Total this month</p>
+      <p class="font-bold text-dark-brown text-2xl">$478.33</p>
+    </div>
+
+    <div class="flex flex-col items-end justify-end">
+      <p class="font-bold text-dark-brown">+2.4%</p>
+      <p class="text-medium-brown -mt-1 text-xs">from last month</p>
+    </div>
+  </div>
+  
+
+</body>
+</html>
